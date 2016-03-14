@@ -2,6 +2,7 @@
 #include "Synthesizer.h"
 #include "ToneInstrument.h"
 #include "OddSinesInstrument.h"
+#include "Additive.h"
 #include "msxml2.h"
 #include "xmlhelp.h"
 #include <cmath>
@@ -98,6 +99,10 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			m_waveinstfactory.SetNote(note);
 			instrument = m_waveinstfactory.CreateInstrument();
+		}
+		else if (note->Instrument() == L"Additive")
+		{
+			instrument = new CAdditive();
 		}
 
 		// Configure the instrument object
