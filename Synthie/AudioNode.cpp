@@ -11,7 +11,7 @@ CAudioNode::CAudioNode()
 	m_bpm = 60.0;
 }
 
-
+//coment test
 
 
 CAudioNode::~CAudioNode()
