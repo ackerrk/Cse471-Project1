@@ -4,6 +4,7 @@
 
 CSineWave::CSineWave()
 {
+	int test = 0;
 	m_phase = 0;
 	m_amp = .1;
 	m_freq = 440;
