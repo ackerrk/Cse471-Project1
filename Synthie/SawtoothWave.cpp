@@ -22,8 +22,8 @@ void CSawtoothWave::Start()
 
 bool CSawtoothWave::Generate()
 {
-	mFrame[0] = mWavetable[mPhase];
-	mFrame[1] = mFrame[0];
+	m_frame[0] = mWavetable[mPhase];
+	m_frame[1] = m_frame[0];
 
 	mPhase = (mPhase + 1) % mWavetable.size();
 
