@@ -15,6 +15,7 @@ public:
 
 	void SetDuration(double d) { m_ar.SetDuration(d); }
 	void SetFreq(double f) { m_sines.SetFreq(f); }
+	void SetHarmonics(int size,int i, double h){ m_sines.AddHarmonic(size,i, h); }
 
 private:
 	CAR         m_ar;

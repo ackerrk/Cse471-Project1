@@ -133,6 +133,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Additive.cpp" />
+    <ClCompile Include="AdditiveFactory.cpp" />
     <ClCompile Include="AddSines.cpp" />
     <ClCompile Include="AR.cpp" />
     <ClCompile Include="AudioNode.cpp" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Additive.h" />
+    <ClInclude Include="AdditiveFactory.h" />
     <ClInclude Include="AddSines.h" />
     <ClInclude Include="AR.h" />
     <ClInclude Include="AudioNode.h" />

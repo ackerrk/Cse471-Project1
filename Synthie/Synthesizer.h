@@ -7,6 +7,7 @@
 #include "xmlhelp.h"
 #include "OddSinesFactory.h"
 #include "WaveInstrumentFactory.h"
+#include "AdditiveFactory.h"
 
 using namespace std;
 
@@ -69,6 +70,8 @@ private:
 
 	COddSinesFactory m_oddsinesfactory;
 	CWaveInstrumentFactory m_waveinstfactory;
+
+	CAdditiveFactory m_additivefactory;
 
 private:
 	std::list<CInstrument *>  m_instruments;

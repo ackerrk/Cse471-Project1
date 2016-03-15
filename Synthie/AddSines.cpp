@@ -19,7 +19,9 @@ void CAddSines::Start(){
 bool CAddSines::Generate(){
 	double samp = 0;
 	for (int i = 0; i < m_harmonics.size(); i++){
-		samp += m_amp*sin(m_phase*(m_harmonics[i]));
+		double amplitude = m_amp / m_harmonics[i];
+
+		samp += amplitude*sin(m_phase*(m_harmonics[i]));
 	}
 	m_frame[1] = m_frame[0] = samp;
 	m_phase += 2 * PI * m_freq * GetSamplePeriod();

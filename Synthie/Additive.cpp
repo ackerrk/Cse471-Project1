@@ -63,6 +63,22 @@ void CAdditive::SetNote(CNote *note)
 			value.ChangeType(VT_R8);
 			m_ar.SetRelease(value.dblVal);
 		}
+		/*else if (name == "h1"){
+			value.ChangeType(VT_R8);
+			m_sines.AddHarmonic(0,value.dblVal);
+		}
+		else if (name == "h2"){
+			value.ChangeType(VT_R8);
+			m_sines.AddHarmonic(1,value.dblVal);
+		}
+		else if (name == "h3"){
+			value.ChangeType(VT_R8);
+			m_sines.AddHarmonic(2,value.dblVal);
+		}
+		else if (name == "h4"){
+			value.ChangeType(VT_R8);
+			m_sines.AddHarmonic(3,value.dblVal);
+		}*/
 	}
 
 }

@@ -102,7 +102,8 @@ bool CSynthesizer::Generate(double * frame)
 		}
 		else if (note->Instrument() == L"Additive")
 		{
-			instrument = new CAdditive();
+			m_additivefactory.SetNote(note);
+			instrument = m_additivefactory.CreateInstrument();
 		}
 
 		// Configure the instrument object

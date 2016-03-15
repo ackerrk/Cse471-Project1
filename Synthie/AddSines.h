@@ -16,6 +16,15 @@ public:
 
 	void SetFreq(double f){ m_freq = f; }
 	void SetAmplitude(double a) { m_amp= a; }
+	void AddHarmonic(int size,int i,double h){ 
+		if (m_harmonics.size() == 0){
+			for (int i = 0; i < size; i++){
+				m_harmonics.push_back(1.0);
+			}
+		}
+		//int harmonic = h;
+		m_harmonics[i] = h;
+		}
 
 private:
 	double m_freq; //fundamental freq
