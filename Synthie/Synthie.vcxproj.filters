@@ -102,9 +102,6 @@
     <ClCompile Include="AdditiveFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Subtractive.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="SawtoothWave.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -115,6 +112,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TriangleWave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubtractiveResonFilter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SubtractiveInstrument.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -215,9 +218,6 @@
     <ClInclude Include="AdditiveFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Subtractive.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SawtoothWave.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -228,6 +228,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TriangleWave.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SubtractiveResonFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SubtractiveInstrument.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -77,6 +77,6 @@ private:
 	std::list<CInstrument *>  m_instruments;
 	void CSynthesizer::XmlLoadScore(IXMLDOMNode * xml);
 	void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml);
-	void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument);
+	void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, wstring& waveform);
 };
 

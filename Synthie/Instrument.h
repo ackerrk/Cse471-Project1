@@ -9,10 +9,16 @@ class CInstrument :
 {
 public:
 	CInstrument();
-	~CInstrument();
+	virtual ~CInstrument();
+
 	virtual void SetNote(CNote *note) = 0;
+
 	void SetSynthesizer(CSynthesizer* s){ m_synth = s; }
+
 private:
 	CSynthesizer* m_synth = nullptr;
+
+protected:
+
 };
 

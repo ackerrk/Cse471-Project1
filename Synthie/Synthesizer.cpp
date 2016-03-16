@@ -7,6 +7,7 @@
 #include "xmlhelp.h"
 #include <cmath>
 #include <algorithm>
+#include "SubtractiveInstrument.h"
 
 
 CSynthesizer::CSynthesizer()
@@ -104,6 +105,11 @@ bool CSynthesizer::Generate(double * frame)
 		{
 			m_additivefactory.SetNote(note);
 			instrument = m_additivefactory.CreateInstrument();
+		}
+
+		else if (note->Instrument() == L"Subtractive")
+		{
+			instrument = new CSubtractiveInstrument();
 		}
 
 		// Configure the instrument object
@@ -326,6 +332,7 @@ void CSynthesizer::XmlLoadScore(IXMLDOMNode * xml)
 void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 {
 	wstring instrument = L"";
+	wstring waveform = L"";
 
 	// Get a list of all attribute nodes and the
 	// length of that list
@@ -353,6 +360,11 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 		{
 			instrument = value.bstrVal;
 		}
+
+		else if (name == "waveform")
+		{
+			waveform = value.bstrVal;
+		}
 	}
 
 
@@ -366,15 +378,15 @@ void CSynthesizer::XmlLoadInstrument(IXMLDOMNode * xml)
 
 		if (name == L"note")
 		{
-			XmlLoadNote(node, instrument);
+			XmlLoadNote(node, instrument, waveform);
 		}
 	}
 }
 
-void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument)
+void CSynthesizer::XmlLoadNote(IXMLDOMNode * xml, std::wstring & instrument, wstring& waveform)
 {
 	m_notes.push_back(CNote());
-	m_notes.back().XmlLoad(xml, instrument);
+	m_notes.back().XmlLoad(xml, instrument, waveform);
 }
 
 

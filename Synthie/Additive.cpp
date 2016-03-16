@@ -20,8 +20,7 @@ void CAdditive::Start()
 	m_time = 0;
 }
 
-
-void CAdditive::SetNote(CNote *note)
+void CAdditive::SetNote(CNote* note)
 {
 	// Get a list of all attribute nodes and the
 	// length of that list
@@ -31,7 +30,7 @@ void CAdditive::SetNote(CNote *note)
 	attributes->get_length(&len);
 
 	// Loop over the list of attributes
-	for (int i = 0; i<len; i++)
+	for (int i = 0; i < len; i++)
 	{
 		// Get attribute i
 		CComPtr<IXMLDOMNode> attrib;
@@ -80,9 +79,7 @@ void CAdditive::SetNote(CNote *note)
 			m_sines.AddHarmonic(3,value.dblVal);
 		}*/
 	}
-
 }
-
 
 bool CAdditive::Generate()
 {
@@ -96,3 +93,4 @@ bool CAdditive::Generate()
 	m_sines.Generate();
 	return valid;
 }
+
